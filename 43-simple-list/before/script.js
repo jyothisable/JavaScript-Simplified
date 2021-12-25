@@ -8,6 +8,10 @@ const handleSubmit = (e) => {
   newItem.innerText = input.value;
   document.querySelector("#list").appendChild(newItem);
   input.value = "";
+  newItem.onclick = () => {
+    newItem.remove();
+  }
+  
 };
 
 form.onsubmit = handleSubmit;
