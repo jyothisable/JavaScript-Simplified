@@ -1,0 +1,20 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "A simple shopping cart in javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html store.html items.html",
+    "build": "parcel build index.html store.html items.html"
+  },
+  "keywords": [
+    "shopping",
+    "cart",
+    "javascript"
+  ],
+  "author": "athul jyothis",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+.directory
+.cache
+dist
