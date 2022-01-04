@@ -4,13 +4,15 @@ const closeModalButton = document.querySelector("#close-modal-btn");
 const overlay = document.querySelector("#overlay");
 
 const handleClick = () => {
-  if (modal.classList.contains("open")) {
-    modal.classList.remove("open");
-    overlay.classList.remove("open");
-  } else {
-    modal.classList.add("open");
-    overlay.classList.add("open");
-  }
+  // if (modal.classList.contains("open")) {
+  //   modal.classList.remove("open");
+  //   overlay.classList.remove("open");
+  // } else {
+  //   modal.classList.add("open");
+  //   overlay.classList.add("open");
+  // }
+  modal.classList.toggle("open");
+  overlay.classList.toggle("open");
 };
 
 openModalButton.onclick = handleClick;
