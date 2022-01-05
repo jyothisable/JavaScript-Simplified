@@ -68,7 +68,7 @@
     </section>
     <section>
       <!-- cart container -->
-      <div data-cart-container class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
+      <div data-cart-container class="invisible mb-4 top-0 right-0 mr-4 mt-20 fixed">
         <div
           style="max-height: calc(100vh - 6rem)"
           class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
@@ -101,14 +101,14 @@
           </div>
           <div class="flex justify-between items-end border-t p-4">
             <span class="font-bold text-lg uppercase">Total</span>
-            <span class="font-bold">$44.00</span>
+            <span data-cartValue class="font-bold">0</span>
           </div>
         </div>
       </div>
       <!-- cart button -->
       <button
         data-cart-button
-        class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
+        class="invisible fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

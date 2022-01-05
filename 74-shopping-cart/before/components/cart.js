@@ -8,9 +8,10 @@ const currencyFormatter = new Intl.NumberFormat("en", {
   currency: "INR",
 });
 
+let cartValue = 0
+
 export function setupCart() {
   // add to cart
-
   document.addEventListener("click", (event) => {
     if (event.target.matches("[data-add-to-cart-button]")) {
       const id = event.target.closest("[data-id]").dataset.id;
@@ -24,6 +25,13 @@ export function setupCart() {
 }
 
 function addToCart(id) {
+  // make cart button visible
+  cartButton.classList.remove("invisible");
+  // add value to cart
+  cartValue = cartValue + jsonItems.find((item) => item.id == id).priceCents;
+  // update cart value
+  document.querySelector("[data-cartValue]").innerText = currencyFormatter.format(cartValue/100);
+  // see if it already exist => just increase count
   const item = cartContainer.querySelector(`[data-id="${id}"]`);
   if (item) {
     const counter = item.querySelector("[data-count]");
@@ -31,6 +39,7 @@ function addToCart(id) {
     return
   }
 
+  // if not exist => create new item
   jsonItems.forEach((item) => {
     if (item.id == id) {
       const newItem = template.content.cloneNode(true);
