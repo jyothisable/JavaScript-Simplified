@@ -2,10 +2,9 @@
   "name": "shopping-cart",
   "version": "1.0.0",
   "description": "A simple shopping cart in javascript",
-  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html store.html team.html",
-    "build": "parcel build index.html store.html team.html"
+    "start": "parcel ./index.html ./pages/store.html ./pages/cart.html",
+    "build": "parcel build ./index.html ./pages/store.html ./pages/cart.html"
   },
   "keywords": [
     "shopping",

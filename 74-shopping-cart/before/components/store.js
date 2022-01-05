@@ -1,4 +1,4 @@
-import jsonItems from './items';
+import jsonItems from '../data/items';
 
 const template = document.querySelector("#cart-item-template");
 const IMAGE_URL = "https://dummyimage.com/420x260/";

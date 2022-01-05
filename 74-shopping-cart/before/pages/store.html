@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <title>Store</title>
-    <script src="script.js" defer></script>
+    <script src="../script.js" defer></script>
   </head>
   <body>
     <header class="text-gray-700 body-font">
@@ -17,13 +17,13 @@
         class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-center"
       >
         <nav class="flex flex-wrap items-center text-base justify-center">
-          <a class="mr-5 hover:text-gray-900" href="/index.html">Home</a>
+          <a class="mr-5 hover:text-gray-900" href="../index.html">Home</a>
           <a
             class="mr-5 border-b-2 border-blue-500 hover:text-gray-900"
-            href="/store.html"
+            href="store.html"
             >Store</a
           >
-          <a class="mr-5 hover:text-gray-900" href="/team.html">Team</a>
+          <a class="mr-5 hover:text-gray-900" href="team.html">Team</a>
         </nav>
       </div>
     </header>
@@ -66,7 +66,8 @@
       </div>
     </section>
     <section>
-      <div class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
+      <!-- cart container -->
+      <div data-cart-container class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
         <div
           style="max-height: calc(100vh - 6rem)"
           class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
@@ -80,7 +81,6 @@
                   src="https://dummyimage.com/210x130/F00/F00"
                 />
                 <button
-                  data-remove-from-cart-button
                   class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center"
                 >
                   &times;
@@ -122,7 +122,9 @@
           </div>
         </div>
       </div>
+      <!-- cart button -->
       <button
+        data-cart-button
         class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
       >
         <svg
