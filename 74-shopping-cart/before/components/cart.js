@@ -13,7 +13,7 @@ export function setupCart() {
 
   document.addEventListener("click", (event) => {
     if (event.target.matches("[data-add-to-cart-button]")) {
-      const id = event.target.closest('[data-id]').dataset.id;
+      const id = event.target.closest("[data-id]").dataset.id;
       addToCart(id);
     }
   });
@@ -24,6 +24,13 @@ export function setupCart() {
 }
 
 function addToCart(id) {
+  const item = cartContainer.querySelector(`[data-id="${id}"]`);
+  if (item) {
+    const counter = item.querySelector("[data-count]");
+    counter.innerText = parseInt(counter.innerText) + 1;
+    return
+  }
+
   jsonItems.forEach((item) => {
     if (item.id == id) {
       const newItem = template.content.cloneNode(true);
