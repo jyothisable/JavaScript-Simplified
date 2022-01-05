@@ -20,3 +20,5 @@ function fetchItem(item) {
   newItem.querySelector("[data-imageColor]").src = `${IMAGE_URL}${item.imageColor}/${item.imageColor}`;
   template.parentElement.appendChild(newItem)
 }
+
+
